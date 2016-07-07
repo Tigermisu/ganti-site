@@ -7,6 +7,7 @@
     <title>Ganti</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/app.css">
     
   </head>
@@ -89,50 +90,86 @@
     <div id="productos" class="section">
         <div class="container">
             <h2>Productos y Servicios</h2>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="service-control left">
-                        <img src="img/graphics/tow.png" alt="Grua">
-                        <h3>Maquinaria</h3>
-                    </div>
+            <div class="control-wrapper">
+                <div class="service-control left active" data-slide="0">
+                    <img src="img/graphics/tow.png" alt="Grua">
+                    <h3>Maquinaria</h3>
                 </div>
-                <div class="col-sm-4">
-                    <div class="service-control center">
-                        <img src="img/graphics/mina.png" alt="Mina">
-                        <h3>Mina</h3>
-                    </div>
+                <div class="service-control center" data-slide="1">
+                    <img src="img/graphics/mina.png" alt="Mina">
+                    <h3>Mina</h3>
                 </div>
-                <div class="col-sm-4">
-                    <div class="service-control right">
-                        <img src="img/graphics/factura.png" alt="Estudios">
-                        <h3>Estudios y Proyectos</h3>
-                    </div>
+                <div class="service-control right"  data-slide="2">
+                    <img src="img/graphics/factura.png" alt="Estudios">
+                    <h3>Estudios y Proyectos</h3>
                 </div>
-            </div>
-            <div class="service" id="machine">
-                <img src="img/service-1.png" alt="Servicio">
-                <p>Para poder llevar a cabo distintas actividades, es necesario contar con la herramienta adecuada para el trabajo adecuado. La maquinaria representa el instrumento que nos permite obtener los resultados eficientes y de alta calidad que ofrecemos. Se cuenta con la experiencia y la herramienta para otorgar un mantenimiento de inmediato y de calidad, punto clave para salir con los compromisos de maquinaria en tiempo y forma.</p>
-                <a href="#" class="btn action">Conoce Más</a>
             </div>
             
-            <div class="service hidden" id="mine">
-                
-            </div>
-            
-            <div class="service hidden" id="projects">
-                
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide swiper-no-swiping">
+                        <div class="service">
+                            <img src="img/service-1.png" alt="Servicio">
+                            <p>Para poder llevar a cabo distintas actividades, es necesario contar con la herramienta adecuada para el trabajo adecuado. La maquinaria representa el instrumento que nos permite obtener los resultados eficientes y de alta calidad que ofrecemos. Se cuenta con la experiencia y la herramienta para otorgar un mantenimiento de inmediato y de calidad, punto clave para salir con los compromisos de maquinaria en tiempo y forma.</p>
+                            <a href="#" class="btn action">Conoce Más</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-no-swiping">
+                        <div class="service">
+                            <img src="img/service-1.png" alt="Servicio">
+                            <p>Para poder llevar a cabo distintas actividades, es necesario contar con la herramienta adecuada para el trabajo adecuado. La maquinaria representa el instrumento que nos permite obtener los resultados eficientes y de alta calidad que ofrecemos. Se cuenta con la experiencia y la herramienta para otorgar un mantenimiento de inmediato y de calidad, punto clave para salir con los compromisos de maquinaria en tiempo y forma.</p>
+                            <a href="#" class="btn action">Conoce Más</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-no-swiping">
+                        <div class="service">
+                            <img src="img/service-1.png" alt="Servicio">
+                            <p>Para poder llevar a cabo distintas actividades, es necesario contar con la herramienta adecuada para el trabajo adecuado. La maquinaria representa el instrumento que nos permite obtener los resultados eficientes y de alta calidad que ofrecemos. Se cuenta con la experiencia y la herramienta para otorgar un mantenimiento de inmediato y de calidad, punto clave para salir con los compromisos de maquinaria en tiempo y forma.</p>
+                            <a href="#" class="btn action">Conoce Más</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     
     <div class="mapwrap">
         <div class="googlemap" id="googlemap"></div>
+        <div class="map-overlay"></div>
     </div>
     
    
-   <div id="contacto">
-         <p>99</p>
-        <p>100</p>
+   <div id="contacto" class="section">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form action="">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <input type="text" placeholder="Nombre" name="name" class="name">
+                        <div class="icon"></div>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" placeholder="Correo" name="email" class="email">
+                        <div class="icon"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <textarea name="message" class="message" placeholder="¿Cómo podemos ayudarte?"></textarea>
+                        <div class="icon"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button class="btn action pull-right">Enviar</button>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </form>
+        </div>
     </div>
     
     <div id="footer" class="footer">
@@ -147,6 +184,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/scrollreveal.min.js"></script>
     <script src="js/app.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe6xCdA5-BYEchjoJBcE9ecXo2vHjg0po&callback=initMap"></script>
   </body>

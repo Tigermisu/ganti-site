@@ -6,8 +6,9 @@ $(function(){
       }
     });
     
-    $(document).on('affix.bs.affix', function(){
-        $('.cover').css('margin-bottom', '100px');
+    $(document).on('affix.bs.affix', function() {
+        if($(window).width() > 767) $('.cover').css('margin-bottom', '100px');
+        else $('.cover').css('margin-bottom', '50px');
     });
     
     $(document).on('affix-top.bs.affix', function(){
@@ -23,6 +24,49 @@ $(function(){
         });
     });
     
+    window.sr = ScrollReveal();
+    sr.reveal('.service-control');
+    sr.reveal('.we-icon + p');
+    sr.reveal('.we-icon');
+    sr.reveal('.section h2');
+    sr.reveal('.section h2 + p');
+    sr.reveal('input');
+    sr.reveal('.icon');
+    sr.reveal('textarea');
+    
+    var swiper = new Swiper ('.swiper-container', {
+    });
+    
+    $('.service-control').click(function() {
+       var $clicked = $(this),
+           slide = $clicked.data('slide');
+        $('.service-control').removeClass('active');
+        $clicked.addClass('active')        
+        swiper.slideTo(slide); 
+    });
+    
+    $('#machine').click(function() {
+       swiper.slideTo(0); 
+    });
+    
+     $('#mine').click(function(){
+       swiper.slideTo(1); 
+    });
+    
+     $('#project').click(function(){
+       swiper.slideTo(2); 
+    });
+    
+    $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top - 50
+            }, 1000);
+        }
+    });
+        
     $(window).resize();
 });
 
