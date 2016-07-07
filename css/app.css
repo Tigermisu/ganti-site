@@ -106,3 +106,47 @@ h2 {
     margin: 60px auto 20px auto;
     display: block;
 }
+
+.service-control {
+     text-align: center;    
+}
+
+.service-control h3 {
+    text-transform: uppercase;
+}
+
+.service {
+    text-align: center;
+}
+
+.mapwrap {
+    height: 600px;
+    max-height: 80vh;
+    width: 100%;
+}
+
+.googlemap {
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    background-color: #000;
+    padding-top: 40px;
+}
+
+.footer img, .footer p, .footer-rights {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    color: #fff;
+}
+
+.footer img {
+    margin-bottom: 30px;
+}
+
+.footer-rights {
+    margin: 40px auto 0px auto;
+    padding-bottom: 4px;
+}
