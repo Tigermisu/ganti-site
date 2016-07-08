@@ -154,7 +154,7 @@ h2 {
 }
 
 div.outermapwrap {
-    overflow-x: hidden;
+    overflow: hidden;
     width: 100%;
 }
 
@@ -167,7 +167,7 @@ div.outermapwrap {
 
 .mapwrap {
     position: relative;
-    transform: rotate(-5deg) translate(-5%);
+    transform: rotate(-3deg) translate(-5%);
 }
 
 .googlemap {
