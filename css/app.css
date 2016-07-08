@@ -39,6 +39,7 @@ h2 {
     height: calc(100vh - 100px);
     background: url(../img/cover.jpg) no-repeat center center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .navbar-ganti {
@@ -150,6 +151,11 @@ h2 {
 
 .service img {
     max-width: 100%;
+}
+
+div.outermapwrap {
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .mapwrap {
@@ -279,13 +285,33 @@ textarea.message + div.icon {
         height: calc(100vh - 50px);
     }
     
+    .navbar-ganti {
+        height: 50px;
+        width: 100vw;
+        max-width: 100%;
+    }
+    
+    .navbar-ganti .navbar-brand {
+        padding: 10px
+    }
+    
+    .navbar-ganti .navbar-brand img {
+        height: 30px;
+    }
+    
     .navbar-toggle {
         border-color: #ddd;
     }
     
+    
     .navbar-nav {
+        position: absolute;
         background-color: #fff;
-        border-bottom: #bcbcbc solid 1px;
+        right: 0;
+        margin-top: -2px;
+        box-shadow: -1px 1px 6px #888888;
+        padding-right: 20px;
+        text-align: right;
     }
     
     .navbar-ganti .nav>li {
@@ -322,15 +348,9 @@ textarea.message + div.icon {
         max-width: 70%;
     }
     
-    .navbar-ganti {
-        height: 50px;
-    }
-    
-    .navbar-ganti .navbar-brand {
-        padding: 10px
-    }
-    
-    .navbar-ganti .navbar-brand img {
-        height: 30px;
+    .center-xs {
+        float: none !important;
+        display: block;
+        margin: 15px auto;
     }
 }

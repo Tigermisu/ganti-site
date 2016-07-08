@@ -136,35 +136,38 @@
         </div>
     </div>
     
-    <div class="mapwrap">
-        <div class="googlemap" id="googlemap"></div>
-        <div class="map-overlay"></div>
+    <div class="outermapwrap">
+        <div class="mapwrap">
+            <div class="googlemap" id="googlemap"></div>
+            <div class="map-overlay"></div>
+        </div>
     </div>
     
    
    <div id="contacto" class="section">
         <div class="container">
             <h2>Contacto</h2>
-            <form action="">
+            <form action="mailer.php" method="post" id="contactForm">
+                <div id="formOutput"></div>
                 <div class="row">
                     <div class="col-sm-6">
-                        <input type="text" placeholder="Nombre" name="name" class="name">
+                        <input type="text" placeholder="Nombre" name="name" class="name" required>
                         <div class="icon"></div>
                     </div>
                     <div class="col-sm-6">
-                        <input type="text" placeholder="Correo" name="email" class="email">
+                        <input type="email" placeholder="Correo" name="email" class="email" required>
                         <div class="icon"></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
-                        <textarea name="message" class="message" placeholder="¿Cómo podemos ayudarte?"></textarea>
+                        <textarea name="message" class="message" placeholder="¿Cómo podemos ayudarte?" required></textarea>
                         <div class="icon"></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
-                        <button class="btn action pull-right">Enviar</button>
+                        <button class="btn action pull-right center-xs">Enviar</button>
                     </div>
                 </div>
                 <div class="clearfix"></div>
