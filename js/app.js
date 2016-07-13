@@ -1,4 +1,43 @@
 $(function(){
+    var serviceSwiper = new Swiper('#serviceSlider', {
+        onSlideChangeStart: function(instance) {
+            $('.service-control').removeClass('active');
+            $('.service-control').eq(instance.activeIndex).addClass('active');
+        },
+        autoHeight: true
+    }),
+        coverSwiper = new Swiper('#ganti', {
+            loop: true,
+            autoplay: 10000,
+            pagination: '.cover .swiper-pagination',
+            paginationClickable: true
+        }),
+
+        maquinariaSwiper = new Swiper('#maquinariaSwiper', {
+            loop: true,
+            autoplay: 5000,
+            pagination: '#maquinariaSwiper .swiper-pagination',
+            paginationClickable: true,
+            nested: true
+        });
+
+        minaSwiper = new Swiper('#minaSwiper', {
+            loop: true,
+            autoplay: 5000,
+            pagination: '#minaSwiper .swiper-pagination',
+            paginationClickable: true,
+            nested: true
+        });
+
+        proyectosSwiper = new Swiper('#proyectosSwiper', {
+            loop: true,
+            autoplay: 5000,
+            pagination: '#proyectosSwiper .swiper-pagination',
+            paginationClickable: true,
+            nested: true
+        });
+
+
     $('#header').affix({
     offset: {
         top: $('.cover').outerHeight(true),
@@ -13,6 +52,15 @@ $(function(){
     
     $(document).on('affix-top.bs.affix', function(){
         $('.cover').css('margin-bottom', '0');
+    });
+
+    $('#projectsOpen').click(function(){
+        $('.service-extra').addClass('show');
+        $('body').append('<div class="black-overlay"></div>');
+        $('.black-overlay').one('click', function () {
+            $('.service-extra').removeClass('show');
+            $('.black-overlay').remove();
+        });        
     });
     
     $(window).resize(function(){
@@ -34,27 +82,25 @@ $(function(){
     sr.reveal('.icon');
     sr.reveal('textarea');
     
-    var swiper = new Swiper ('.swiper-container', {
-    });
     
     $('.service-control').click(function() {
        var $clicked = $(this),
            slide = $clicked.data('slide');
         $('.service-control').removeClass('active');
         $clicked.addClass('active')        
-        swiper.slideTo(slide); 
+        serviceSwiper.slideTo(slide); 
     });
     
     $('#machine').click(function() {
-       swiper.slideTo(0); 
+       serviceSwiper.slideTo(0); 
     });
     
      $('#mine').click(function(){
-       swiper.slideTo(1); 
+       serviceSwiper.slideTo(1); 
     });
     
      $('#project').click(function(){
-       swiper.slideTo(2); 
+       serviceSwiper.slideTo(2); 
     });
     
     $('a[href^="#"]').on('click', function(event) {
