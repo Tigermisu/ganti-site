@@ -298,6 +298,7 @@ textarea.message + div.icon {
 
 .footer img {
     margin-bottom: 30px;
+    max-width: 400px;
 }
 
 .footer-rights {

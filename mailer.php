@@ -94,7 +94,7 @@
         $recipient = "chja@outlook.com";
 
         // Set the email subject.
-        $subject = "Mensaje del Sitio Web: $name";
+        $subject = "Contacto de Web Ganti: $name";
 
         // Build the email content.
         $email_content = "Mensaje enviado desde la forma de contacto del sitio web de Ganti\n\n";
