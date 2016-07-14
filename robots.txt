@@ -1,0 +1,4 @@
+User-agent: *
+Sitemap: http://ganti.com.mx/sitemap.xml
+Disallow: /cgi-bin/
+Disallow: /tmp/

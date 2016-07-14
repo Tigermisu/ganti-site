@@ -70,6 +70,10 @@ h2 {
     z-index: 5;
 }
 
+.navbar-ganti .navbar-brand img {
+    height: 71px;
+}
+
 .navbar-ganti .nav>li {
     padding: 25px 2px;
     text-transform: uppercase;
