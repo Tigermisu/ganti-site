@@ -180,23 +180,30 @@ function setUpForm() {
 function initMap() {
     var mapCanvas = document.getElementById('googlemap');
     var mapOptions = {
-        center: new google.maps.LatLng(28.6269499, -106.0989802),
-        zoom: 15,
+        center: new google.maps.LatLng(28.6548754, -106.091691),
+        zoom: 17,
         scrollwheel: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
 
-    var map = new google.maps.Map(mapCanvas, mapOptions);
-    var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(28.6269499, -106.0989802),
-        map: map,
-        title: 'GANTI'
-    });
+    var map = new google.maps.Map(mapCanvas, mapOptions),
+        image = {
+            url: 'img/marker.png',
+            size: new google.maps.Size(256, 256),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(128, 128)
+        },
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(28.6548754, -106.091691),
+            map: map,
+            icon: image,
+            title: 'GANTI'
+        });
 
     google.maps.event.addListener(marker, 'click', function() {
         if ((navigator.platform.indexOf("iPhone") != -1) || (navigator.platform.indexOf("iPod") != -1) || (navigator.platform.indexOf("iPad") != -1))
-            window.open("maps://maps.google.com/?saddr=Current+Location&daddr=Boulevard+Antonio+Ortiz+Mena+3411,+Chihuahua,+Chih.,+Mexico");
+            window.open("maps://maps.google.com/?saddr=Current+Location&daddr=Av+Pascual+Orozco+909,+San+Felipe+III+Etapa,+31203+Chihuahua,+Chih.,+Mexico");
         else
-            window.open("http://maps.google.com/?saddr=Current+Location&daddr=Boulevard+Antonio+Ortiz+Mena+3411,+Chihuahua,+Chih.,+Mexico");
+            window.open("http://maps.google.com/?saddr=Current+Location&daddr=Av+Pascual+Orozco+909,+San+Felipe+III+Etapa,+31203+Chihuahua,+Chih.,+Mexico");
     });
 }

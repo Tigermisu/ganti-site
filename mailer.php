@@ -91,7 +91,7 @@
         }
 
         // Set the recipient email address.        
-        $recipient = "chja@outlook.com";
+        $recipient = "contactanos@ganti.com.mx";
 
         // Set the email subject.
         $subject = "Contacto de Web Ganti: $name";

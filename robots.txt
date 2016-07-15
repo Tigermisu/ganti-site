@@ -1,4 +1,13 @@
-User-agent: *
+User-agent: Google
+Disallow:
 Sitemap: http://ganti.com.mx/sitemap.xml
-Disallow: /cgi-bin/
-Disallow: /tmp/
+
+User-agent: *
+Disallow: /admin/
+Disallow: /respaldo
+Disallow: /stats
+Disallow: /cgi-bin
+Disallow: /.Archived
+Disallow: /mailer.php
+Disallow: /admin.zip
+Sitemap: http://ganti.com.mx/sitemap.xml
